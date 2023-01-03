@@ -1,17 +1,21 @@
 #include "main.h"
 
 /**
- * _memset - Entry point
- * @s: pointed destination
- * @b: constant byte
- * @n: bytes
- * Return: Always 0 (Success)
+ * *_memcpy - copy into memory location
+ * @dest: char type pointer to destination array
+ * @src: char type pointer to source array
+ * @n: unsigned int type
+ * Return: pointer to destination
  */
-char *_memset(char *s, char b, unsigned int n)
-{
-	unsigned int i;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
-	return (s);
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	int x;
+
+	for (x = 0; n > 0; x++)
+	{
+		dest[x] = src[x];
+		n--;
+	}
+	return (dest);
 }
